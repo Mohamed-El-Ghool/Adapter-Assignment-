@@ -1,0 +1,10 @@
+
+package adapter.pattern.assignment;
+public class AdapterPatternAssignment {
+    public static void main(String[] args) {
+        Divider d=new DividerAdapter("divide");
+        BigDecimal b=d.divide(new BigDecimal(10, 3, 5));
+        b.showBigDecimalOperation();
+    }
+    
+}

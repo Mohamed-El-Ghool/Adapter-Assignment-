@@ -1,0 +1,27 @@
+package adapter.pattern.assignment;
+public class DividerAdapter implements Divider{
+    private String operation;
+    private Multiplyer multiplyer;
+    public DividerAdapter(String operation)
+    {
+        this.operation=operation;
+    }
+    @Override
+    public BigDecimal divide(BigDecimal bigDecimal) 
+    {
+        if(operation.equalsIgnoreCase("Multiply"))
+        {
+            multiplyer=new Multiplyer();
+            return(multiplyer.multiply(bigDecimal));
+        }
+        else if(operation.equalsIgnoreCase("Divide"))
+        {
+            BigDecimal b=bigDecimal;
+            b.setQoutientOfBigDecimal(b.getNumOfBigDecimal()/b.getDividerOfBigDecimal());
+            return b;
+        }
+        else
+            return null;
+    }
+    
+}

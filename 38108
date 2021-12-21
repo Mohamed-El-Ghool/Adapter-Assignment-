@@ -1,0 +1,10 @@
+package adapter.pattern.assignment;
+public class Multiplyer implements MultiplyInterface{
+    @Override
+    public BigDecimal multiply(BigDecimal bigDecimal) {
+         BigDecimal b=bigDecimal;
+         b.setProductOfBigDecimal(b.getNumOfBigDecimal()*b.getMultiplyerOfBigDecimal());
+         return b;
+    }
+    
+}

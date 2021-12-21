@@ -1,0 +1,4 @@
+package adapter.pattern.assignment;
+public interface Divider extends DivideInterface{
+    
+}

@@ -1,0 +1,63 @@
+package adapter.pattern.assignment;
+public class BigDecimal {
+    private double number;
+    private double multiplyer;
+    private double product;
+    private double divider;
+    private double qoutient;
+    public BigDecimal(double number,double multiplyer,double divider)
+    {
+        this.number=number;
+        this.multiplyer=multiplyer;
+        this.divider=divider;
+    }
+    public void setNumOfBigDecimal(double number)
+    {
+        this.number=number;
+    }
+    public void setMultiplyerOfBigDecimal(double multiplyer)
+    {
+        this.multiplyer=multiplyer;
+    }
+    public void setProductOfBigDecimal(double product)
+    {
+        this.product=product;
+    }
+    public void setDividerOfBigDecimal(double divider)
+    {
+        this.divider=divider;
+    }
+    public void setQoutientOfBigDecimal(double qoutient)
+    {
+        this.qoutient=qoutient;
+    }
+    public double getMultiplyerOfBigDecimal()
+    {
+        return multiplyer;
+    }
+    public double getDividerOfBigDecimal()
+    {
+        return divider;
+    }
+    public double getNumOfBigDecimal()
+    {
+        return number;
+    }
+    public double getProductOfBigDecimal()
+    {
+        return product;
+    }
+    public double getQoutientOfBigDecimal()
+    {
+        return qoutient;
+    }
+    public void showBigDecimalOperation()
+    {
+        if(this.product>0)
+        {
+            System.out.println(this.number+" * "+this.multiplyer+" = "+this.product);
+        }
+        else 
+            System.out.println(this.number+" / "+this.divider+" = "+this.qoutient);
+    }
+}
